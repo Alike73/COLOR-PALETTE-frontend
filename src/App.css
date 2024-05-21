@@ -1,0 +1,60 @@
+
+
+
+.page {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.palette-icon {
+    width: 2.5rem;
+    filter: var(--img-shadow-2);
+}
+
+.banner__img {
+    filter: var(--img-shadow-2);
+}
+
+h1 {
+    background-image: linear-gradient(to right, 
+        hsl(0, 100%, 50%),    /* Red */
+        hsl(15, 100%, 50%),   /* Reddish Orange */
+        hsl(30, 100%, 50%),   /* Orange */
+        hsl(45, 100%, 50%),   /* Yellowish Orange */
+        hsl(60, 100%, 50%),   /* Yellow */
+        hsl(90, 100%, 50%),   /* Yellowish Green */
+        hsl(120, 100%, 50%),  /* Green */
+        hsl(180, 100%, 50%),  /* Cyan */
+        hsl(240, 100%, 50%),  /* Blue */
+        hsl(275, 100%, 50%),  /* Indigo */
+        hsl(300, 100%, 50%),  /* Violet */
+        hsl(330, 100%, 50%),  /* Pink */
+        hsl(360, 100%, 50%)   /* Red */
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: var(--text-shadow);
+}
+
+/* ---Search-Input--- */
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+    z-index: 1000; /* Ensure dropdown appears above other elements */
+}
+
+.dropdown-menu {
+    border: 1px solid #ddd;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.list-group-item {
+    cursor: pointer;
+}
