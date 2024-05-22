@@ -28,6 +28,8 @@ body {
   --size: calc(1vh + 1vw);
 
   --c-grey: hsl(208, 7%, 46%);
+  --c-secondary: hsl(210, 16%, 93%);
+  --c-alabastor: hsl(54, 24%, 92%);
 
   --img-shadow: drop-shadow(1px 2px 3px #000000);
   --img-shadow-2: drop-shadow(1px 1px 1px #707070);
@@ -36,4 +38,21 @@ body {
     rgb(0 0 0 / 40%), 0px 4px 7px 
     rgb(0 0 0 / 20%), 0px 9px 12px 
     rgb(0 0 0 / 20%);
+
+  --l-sm1: .25rem;
+  --l-sm2: .375rem;
+  --l-sm3: .5rem;
+  --l-sm4: .75rem;
+  --l-md1: 1rem;
+  --l-md2: 1.25rem;
+  --l-md3: 1.5rem;
+  --l-lg1: 2rem;
+  --l-lg2: 3rem;
+  --l-lg3: 4rem;
+  --l-lg4: 4.7rem;
+  --l-lg5: 7.5rem;
+
+  --transition: 250ms ease-in-out;
+  --transition-sm: 125ms ease-in-out;
+  --transition-lg: 500ms ease-in-out;
 }

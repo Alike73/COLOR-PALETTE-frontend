@@ -1,6 +1,11 @@
 
 
-
+.my-header {
+    position: sticky;
+    top: 0;
+    transition: var(--transition);
+    z-index: 100;
+}
 .page {
     width: 100%;
     height: 100%;
@@ -10,6 +15,11 @@
 .palette-icon {
     width: 2.5rem;
     filter: var(--img-shadow-2);
+}
+
+.banner__bg {
+    border-radius: var(--l-sm2);
+    background: var(--c-secondary);
 }
 
 .banner__img {
@@ -43,18 +53,78 @@ h1 {
 .position-relative {
     position: relative;
 }
-
 .position-absolute {
     position: absolute;
     z-index: 1000; /* Ensure dropdown appears above other elements */
 }
-
 .dropdown-menu {
     border: 1px solid #ddd;
     background: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 .list-group-item {
     cursor: pointer;
+}
+
+/* ---Colors-Shelf-Section--- */
+.sidebar-nav {
+    position: sticky;
+    top: 5rem;
+}
+
+
+.color-display {
+    width: 100%;
+    height: 14.0625rem;
+    transition: var(--transition);
+}
+
+.color-box {
+    height: 5rem;
+}
+
+.color-place {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    background: red;
+    border-radius: var(--l-sm3);
+}
+.copy-btn-1 {
+    position: absolute;
+    top: .25rem;
+    right: .25rem;
+    background: transparent;
+    border: none;
+    border-radius: calc(var(--l-sm3) - .25rem);
+    translate: 0 -30px;
+    background: rgba(0, 0, 0, .4);
+    transition: var(--transition);
+}
+.copy-btn-1-icon {
+    color: var(--c-alabastor);
+}
+.copy-btn-2 {
+    background: rgba(0, 0, 0, .4);
+    border-radius: calc(var(--l-sm3) - .25rem);
+    border: none;
+    padding: var(--l-sm1);
+    margin: 0 .25rem .25rem;
+    font-size: clamp(var(--l-sm1), calc(var(--size) * 1.2), var(--l-md1));
+    color: var(--c-alabastor);
+    translate: 0 35px;
+    transition: var(--transition);
+}
+.color-place:hover .copy-btn-1,
+.color-place:hover .copy-btn-2 {
+    translate: 0;
+}
+
+@media all and (max-width: 800px) {
+    .copy-btn-2 {
+        font-size: clamp(var(--l-sm1), calc(var(--size) * 1.2), var(--l-sm4));
+    }
 }

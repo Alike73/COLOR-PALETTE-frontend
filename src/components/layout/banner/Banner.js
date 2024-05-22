@@ -1,33 +1,28 @@
 import React from 'react';
+import EditorOpenBtn from '../../shared/buttons/EditorOpenBtn';
+import { useSelector } from 'react-redux';
+import { getActiveOpenEditorBtn } from '../../../utils/redux/EditorSlice';
 
 const Banner = ({ bannerImg }) => {
 
+    const isActiveOpenBtn = useSelector(getActiveOpenEditorBtn);
+
     return (
-        <div className="container col-xxl-8 px-4 py-5 banner">
-            <div className="row flex-lg-row-reverse justify-content-center align-items-center g-3 pb-5">
-                <div className="col-10 col-sm-8 col-lg-6">
-                    <img 
-                        src={ bannerImg } 
-                        className="d-block mx-lg-auto img-fluid banner__img" 
-                        alt="Bootstrap Themes" 
-                        width="400" 
-                        loading="lazy" 
-                    />
-                </div>
-                <div className="col-lg-6">
-                    <h1 className="display-1 fw-bold lh-1 mb-3">
-                        Color Palette
-                    </h1>
-                    <p className="lead">
-                        Quickly design and customize responsive mobile-first sites with Bootstrap, 
-                        the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, 
-                        responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.
-                    </p>
-                    {/* <div className="d-grid gap-2 d-md-flex justify-content-md-start">
-                        <button type="button" className="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
-                        <button type="button" className="btn btn-outline-secondary btn-lg px-4">Default</button>
-                    </div> */}
-                </div>
+        <div className="row flex-lg-row-reverse justify-content-center align-items-center g-3 pb-5 mb-5 banner__bg">
+            <div className="col-10 col-sm-8 col-lg-6">
+                <img 
+                    src={ bannerImg } 
+                    className="d-block mx-lg-auto img-fluid banner__img" 
+                    alt="Bootstrap Themes" 
+                    width="400" 
+                    loading="lazy" 
+                />
+            </div>
+            <div className="col-lg-6">
+                <h1 className="display-1 fw-bold lh-1 text-center mb-5 pb-5">
+                    Color Palette
+                </h1>
+                { isActiveOpenBtn && <EditorOpenBtn />}
             </div>
         </div>
     )
