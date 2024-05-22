@@ -1,6 +1,6 @@
 import { TbCopy } from "react-icons/tb";
 
-const CopyBtn1 = () => {
+const CopyBtn = () => {
 
     return (
         <button className="copy-btn-1">
@@ -9,4 +9,4 @@ const CopyBtn1 = () => {
     )
 };
 
-export default CopyBtn1;
+export default CopyBtn;

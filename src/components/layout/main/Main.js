@@ -13,7 +13,7 @@ const Main = () => {
         <div className='page'>
             <Editor />
             <Header />
-            <main className="container col-xxl-8 px-4 pt-5 pb-3">
+            <main className="container px-4 pt-5 pb-3">
                 <Banner bannerImg = { bannerImg } />
                 <ColorsShelf />
             </main>
