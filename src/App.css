@@ -29,6 +29,9 @@
     box-shadow: var(--box-shadow);
     border-radius: var(--l-sm2);
 }
+.tin_paint {
+    filter: var(--img-shadow-2);
+}
 
 h1 {
     background-image: linear-gradient(to right, 

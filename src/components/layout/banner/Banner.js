@@ -2,6 +2,7 @@ import React from 'react';
 import EditorOpenBtn from '../../shared/buttons/EditorOpenBtn';
 import { useSelector } from 'react-redux';
 import { getActiveOpenEditorBtn } from '../../../utils/redux/EditorSlice';
+import TinPaint from './TinPaint';
 
 const Banner = ({ bannerImg }) => {
 
@@ -22,7 +23,9 @@ const Banner = ({ bannerImg }) => {
                 <h1 className="display-1 fw-bold lh-1 text-center mb-5 pb-5">
                     Color Palette
                 </h1>
-                { isActiveOpenBtn && <EditorOpenBtn />}
+                <div className="d-flex justify-content-center">
+                    { isActiveOpenBtn ? (<EditorOpenBtn />) : (<TinPaint />) }
+                </div>
             </div>
         </div>
     )

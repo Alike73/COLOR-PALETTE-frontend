@@ -1,10 +1,10 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
 import Swal from 'sweetalert2';
-import SearchInput from '../../shared/search-input/SearchInput';
+import tin_paint from '../../../assets/images/colors-tin.png'
+import { useDispatch } from 'react-redux';
 import { setIsActiveOpenBtn } from '../../../utils/redux/EditorSlice';
 
-const Header = () => {
+const TinPaint = () => {
 
     const dispatch = useDispatch();
     const myAdminName = 'Alec';
@@ -46,15 +46,17 @@ const Header = () => {
             });
         }
     };
-    
 
     return (
-        <header className="py-3 mb-3 border-bottom my-header">
-            <div className="container">
-                <SearchInput handleOpenEditor = { handleOpenEditor } />
-            </div>
-        </header>
+        <img 
+            src={ tin_paint } 
+            className="d-block mx-lg-auto img-fluid tin_paint" 
+            alt="Bootstrap Themes" 
+            width="150" 
+            loading="lazy"
+            onClick = { handleOpenEditor } 
+        />
     )
 };
 
-export default Header;
+export default TinPaint;
