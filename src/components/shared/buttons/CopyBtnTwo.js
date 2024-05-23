@@ -1,9 +1,9 @@
 
-const CopyBtnTwo = () => {
+const CopyBtnTwo = ({ color_bg, handleCopy }) => {
 
     return (
-        <button className="copy-btn-2">
-            #344C64
+        <button className="copy-btn-2" onClick = { handleCopy }>
+            { color_bg }
         </button>
     )
 };

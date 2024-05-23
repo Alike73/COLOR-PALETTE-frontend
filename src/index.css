@@ -31,6 +31,8 @@ body {
   --c-secondary: hsl(210, 16%, 93%);
   --c-alabastor: hsl(54, 24%, 92%);
   --c-pink: hsl(304, 30%, 72%);
+  --c-terracotta: hsl(350, 38%, 33%);
+  --c-red-accent: hsl(0, 100%, 50%);
 
   --img-shadow: drop-shadow(1px 2px 3px #000000);
   --img-shadow-2: drop-shadow(1px 1px 1px #707070);

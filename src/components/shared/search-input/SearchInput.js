@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import inputIcon from '../../../assets/images/palette.svg';
 import SearchInputDropdown from './SearchInputDropdown';
+import { useSelector } from 'react-redux';
+import { getActiveHeader } from '../../../utils/redux/HeaderSlice';
 
 const SearchInput = ({ handleOpenEditor }) => {
     const [isDropdownVisible, setDropdownVisible] = useState(false);
+    const isActiveHeader = useSelector(getActiveHeader);
 
     const handleFocus = () => {
         setDropdownVisible(true);
@@ -19,7 +22,7 @@ const SearchInput = ({ handleOpenEditor }) => {
             <form className="w-100" role="search">
                 <div className="d-flex align-items-center">
                     <img 
-                    className="me-2 palette-icon" 
+                    className={ `me-2 palette-icon ${ isActiveHeader ? "active" : "" }` } 
                     src={inputIcon} 
                     alt="color palette"
                     onClick = { handleOpenEditor } 
