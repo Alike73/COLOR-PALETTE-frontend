@@ -30,6 +30,7 @@ body {
   --c-grey: hsl(208, 7%, 46%);
   --c-secondary: hsl(210, 16%, 93%);
   --c-alabastor: hsl(54, 24%, 92%);
+  --c-pink: hsl(304, 30%, 72%);
 
   --img-shadow: drop-shadow(1px 2px 3px #000000);
   --img-shadow-2: drop-shadow(1px 1px 1px #707070);
@@ -61,4 +62,6 @@ body {
   --transition-lg: 500ms ease-in-out;
 
   --bg-display: url('./assets/images/card-palette-bg.png');
+  --bg-banner: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+  --bg-header: linear-gradient(-225deg, #65379B 0%, #886AEA 53%, #6457C6 100%);
 }

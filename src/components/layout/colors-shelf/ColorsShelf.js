@@ -1,13 +1,13 @@
 import React from 'react';
 import Palettes from './Palettes';
 
-const ColorsShelf = () => {
+const ColorsShelf = ({ filteredPalettes }) => {
 
     // row g-3
 
     return (
         <>
-            <Palettes />
+            <Palettes filteredPalettes = { filteredPalettes } />
         </>
     )
 };

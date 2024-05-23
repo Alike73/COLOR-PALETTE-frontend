@@ -4,7 +4,7 @@ const Editor = () => {
 
     return (
         <div className="modal fade" id="editor" tabIndex="-1" aria-labelledby="editorLabel" aria-hidden="true">
-            <div className="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div className="modal-dialog modal-lg modal-dialog-scrollable">
                 <div className="modal-content">
                     <div className="modal-header">
                         <h2 className="modal-title fs-5" id="editorLabel">Modal title</h2>

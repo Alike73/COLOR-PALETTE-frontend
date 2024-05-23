@@ -21,7 +21,7 @@ const Banner = ({ bannerImg }) => {
             </div>
             <div className="col-lg-6">
                 <h1 className="display-1 fw-bold lh-1 text-center mb-5 pb-5">
-                    Color Palette
+                    Color Palettes
                 </h1>
                 <div className="d-flex justify-content-center">
                     { isActiveOpenBtn ? (<EditorOpenBtn />) : (<TinPaint />) }

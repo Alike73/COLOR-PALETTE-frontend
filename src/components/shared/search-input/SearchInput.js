@@ -17,7 +17,7 @@ const SearchInput = ({ handleOpenEditor }) => {
     return (
         <div className="position-relative w-100">
             <form className="w-100" role="search">
-                <div className="d-flex align-items-center ps-5">
+                <div className="d-flex align-items-center">
                     <img 
                     className="me-2 palette-icon" 
                     src={inputIcon} 
