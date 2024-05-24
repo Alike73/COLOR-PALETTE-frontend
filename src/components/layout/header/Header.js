@@ -5,7 +5,7 @@ import SearchInput from '../../shared/search-input/SearchInput';
 import { setIsActiveOpenBtn } from '../../../utils/redux/EditorSlice';
 import { getActiveHeader, setIsActiveHeader } from '../../../utils/redux/HeaderSlice';
 
-const Header = () => {
+const Header = ({ filteredPalettes }) => {
 
     const dispatch = useDispatch();
     const isActiveHeader = useSelector(getActiveHeader);
@@ -63,7 +63,7 @@ const Header = () => {
     return (
         <header className={ `py-3 mb-3 my-header ${ isActiveHeader ? "active" : "" }` }>
             <div className="container">
-                <SearchInput handleOpenEditor = { handleOpenEditor } />
+                <SearchInput handleOpenEditor = { handleOpenEditor } filteredPalettes = { filteredPalettes } />
             </div>
         </header>
     )

@@ -30,6 +30,7 @@ body {
   --c-grey: hsl(208, 7%, 46%);
   --c-secondary: hsl(210, 16%, 93%);
   --c-alabastor: hsl(54, 24%, 92%);
+  --c-light: hsl(0, 0%, 100%);
   --c-pink: hsl(304, 30%, 72%);
   --c-terracotta: hsl(350, 38%, 33%);
   --c-red-accent: hsl(0, 100%, 50%);

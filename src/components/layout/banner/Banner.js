@@ -1,12 +1,7 @@
 import React from 'react';
-import EditorOpenBtn from '../../shared/buttons/EditorOpenBtn';
-import { useSelector } from 'react-redux';
-import { getActiveOpenEditorBtn } from '../../../utils/redux/EditorSlice';
-import TinPaint from './TinPaint';
+import TinPaintOpenEditor from './TinPaintOpenEditor';
 
-const Banner = ({ bannerImg }) => {
-
-    const isActiveOpenBtn = useSelector(getActiveOpenEditorBtn);
+const Banner = ({ bannerImg, setEditing, setTitle, setCategory, setColor_1, setColor_2, setColor_3, setColor_4 }) => {
 
     return (
         <div className="row flex-lg-row-reverse justify-content-center align-items-center g-3 pb-5 mb-5 banner__bg">
@@ -24,7 +19,15 @@ const Banner = ({ bannerImg }) => {
                     Color Palettes
                 </h1>
                 <div className="d-flex justify-content-center">
-                    { isActiveOpenBtn ? (<EditorOpenBtn />) : (<TinPaint />) }
+                    <TinPaintOpenEditor 
+                    setEditing = { setEditing } 
+                    setTitle = { setTitle } 
+                    setCategory = { setCategory }
+                    setColor_1 = { setColor_1 }
+                    setColor_2 = { setColor_2 }
+                    setColor_3 = { setColor_3 }
+                    setColor_4 = { setColor_4 }
+                    />
                 </div>
             </div>
         </div>

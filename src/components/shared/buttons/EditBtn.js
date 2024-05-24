@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaEdit } from "react-icons/fa";
 
-const EditBtn = () => {
+const EditBtn = ({ updatingInInput }) => {
 
     return (
         <button 
@@ -9,8 +9,9 @@ const EditBtn = () => {
             className="btn btn-sm btn-outline-success me-3"
             data-bs-toggle="modal" 
             data-bs-target="#editor"
+            onClick = { updatingInInput }
             >
-            <FaEdit className='me-2' /> 
+            <FaEdit className='me-2 fs-5' /> 
             Edit
         </button>
     )

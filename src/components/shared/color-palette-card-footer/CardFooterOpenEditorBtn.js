@@ -1,11 +1,12 @@
-import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getActiveOpenEditorBtn, setIsActiveOpenBtn } from '../../../utils/redux/EditorSlice';
 import Swal from 'sweetalert2';
-import tin_paint from '../../../assets/images/colors-tin.png'
-import { useDispatch } from 'react-redux';
-import { setIsActiveOpenBtn } from '../../../utils/redux/EditorSlice';
+import { TbEdit } from "react-icons/tb";
+import { TbEditOff } from "react-icons/tb";
 
-const TinPaint = () => {
+const CardFooterOpenEditorBtn = () => {
 
+    const isActiveOpenBtn = useSelector(getActiveOpenEditorBtn);
     const dispatch = useDispatch();
     const myAdminName = 'Alec';
     const myAdminPass = 'K@ch@pon2011';
@@ -47,16 +48,22 @@ const TinPaint = () => {
         }
     };
 
+    const handleCloseEditor = () => {
+        dispatch(setIsActiveOpenBtn(false));
+    };
+
     return (
-        <img 
-            src={ tin_paint } 
-            className="d-block mx-lg-auto img-fluid tin_paint" 
-            alt="Bootstrap Themes" 
-            width="150" 
-            loading="lazy"
-            onClick = { handleOpenEditor } 
-        />
+        <button 
+            type="button" 
+            className={ `btn btn-sm me-3 ${ isActiveOpenBtn ? "btn-outline-primary" : "btn-outline-danger" }` } 
+            onClick = { isActiveOpenBtn ? handleCloseEditor : handleOpenEditor }
+            >
+            { isActiveOpenBtn 
+                ? (<TbEditOff className='fs-5' />) 
+                : (<TbEdit className='fs-5' />)
+            }
+        </button>
     )
 };
 
-export default TinPaint;
+export default CardFooterOpenEditorBtn;

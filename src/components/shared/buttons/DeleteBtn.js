@@ -2,7 +2,7 @@ import React from 'react';
 import Swal from 'sweetalert2'
 import { FaRegTrashAlt } from "react-icons/fa";
 
-const DeleteBtn = () => {
+const DeleteBtn = ({ deleteProject }) => {
 
     const handleDeletePalette = () => {
         Swal.fire({
@@ -14,13 +14,16 @@ const DeleteBtn = () => {
             cancelButtonColor: "#d33",
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
-        if (result.isConfirmed) {
-            Swal.fire({
-            title: "Deleted!",
-            text: "Your file has been deleted.",
-            icon: "success"
-            });
-        }
+            if (result.isConfirmed) {
+                deleteProject();
+                Swal.fire({
+                title: "Deleted!",
+                text: "Color palette has been deleted.",
+                icon: "success",
+                showConfirmButton: false,
+                timer: 1700
+                });
+            }
         });
     }
 
@@ -30,7 +33,7 @@ const DeleteBtn = () => {
             className="btn btn-sm btn-outline-danger"
             onClick = { handleDeletePalette }
             >
-            <FaRegTrashAlt /> 
+            <FaRegTrashAlt className='me-2 fs-5' /> 
             delete
         </button>
     )

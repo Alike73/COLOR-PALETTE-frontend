@@ -5,7 +5,9 @@ export const categorySlice = createSlice({
 
     initialState: {
         selectedCategory: 'ALL',
-        searchTerm: ''
+        searchTerm: '',
+        paletteName: null,
+        showPaletteName: false
     },
     reducers: {
         filterCategory: (state, action) => {
@@ -13,14 +15,22 @@ export const categorySlice = createSlice({
         },
         setSearchTerm: (state, action) => {
             state.searchTerm = action.payload;
-        }
+        },
+        setPaletteName: (state, action) => {
+            state.paletteName = action.payload;
+        },
+        setShowPaletteName: (state, action) => {
+            state.showPaletteName = action.payload;
+        },
     },
 });
 
 export const getSelectedCategory = state => state.categoryItems.selectedCategory;
 export const getSearchTerm = state => state.categoryItems.searchTerm;
+export const getPaletteName = state => state.categoryItems.paletteName;
+export const getShowPaletteName = state => state.categoryItems.showPaletteName;
 
-export const { filterCategory, setSearchTerm } = categorySlice.actions;
+export const { filterCategory, setSearchTerm, setPaletteName, setShowPaletteName } = categorySlice.actions;
 export default categorySlice.reducer;
 
 
