@@ -19,11 +19,11 @@ const PaletteCard = ({ updatingInInput, deleteProject, title, color_1, color_2, 
         <div className="col">
             <div className="card">
                 <PaletteCardDisplay 
-                    title = { title } 
-                    color_1 = { color_1 } 
+                    title = { title }  
                     hoveredColor = { hoveredColor } 
                 />
-                <PaletteCardBody 
+                <PaletteCardBody
+                    title = { title } 
                     color_1 = { color_1 } 
                     color_2 = { color_2 } 
                     color_3 = { color_3 } 

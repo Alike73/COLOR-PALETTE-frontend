@@ -13,7 +13,7 @@ const InputInfoBtn = () => {
 
     return (
         <button 
-            className="d-flex align-items-center btn btn-sm btn-secondary rounded-pill ps-2 pe-1 input-info-btn me-2" 
+            className="d-flex align-items-center btn btn-sm btn-primary rounded-pill ps-2 pe-1 input-info-btn me-2" 
             type="button"
             >
             { paletteName }

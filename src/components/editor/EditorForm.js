@@ -38,6 +38,13 @@ const EditorForm = ({ handleSubmit, editing, title, setTitle,
 
     return (
         <form id='editor-form' onSubmit = { handleSubmit }>
+            <p className='text-center text-primary lead mb-1'>
+                Title and Category should consist no more than 
+                <span className='text-danger fs-4 fw-bold mx-2'>
+                    14
+                </span>
+                 characters
+            </p>
             <div className="input-group mb-3">
                 <input 
                 id='palette-title' 

@@ -1,4 +1,85 @@
-
+/* ===Scroll-Btn=== */
+.top-to-btm{
+    position: relative;
+}
+.icon-position{
+    position: fixed;
+    bottom: 2.5rem;
+    right: 1rem;
+    z-index: 1000;
+}
+.icon-position2{
+    position: fixed;
+    top: 11.25rem;
+    right: 1rem;
+    z-index: 1000;
+}
+@keyframes movebtn {
+    0%{
+            transform: translateY(0px);
+    }
+    25%{
+            transform: translateY(15px);
+    }
+    50%{
+            transform: translateY(0px);
+    }
+    75%{
+            transform: translateY(-15px);
+    }
+    100%{
+            transform: translateY(0px);
+    }
+}
+.icon-style{
+    background-color: var(--c-transparent-dark);
+    border: 2px solid var(--c-label);
+    border-radius: 50%;
+    height: 1.975rem;
+    width: 1.975rem;
+    padding: var(--l-sm1);
+    color: var(--c-light);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: movebtn 3s ease-in-out infinite;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transition: var(--transition);
+}
+.icon-style:hover{
+    animation: none;
+    color: var(--c-red-accent);
+    border: 2px solid var(--c-red-accent);
+}
+/* -------------------------- */
+.modal-close-btn {
+    transition: var(--transition);
+}
+.modal-close-btn:hover {
+    cursor: pointer;
+    transform: rotate(90deg);
+}
+/* ===Scroll-Progress=== */
+.scroll_progress {
+    position: fixed;
+    z-index: 1100;
+    top: 0;
+    left: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 4px;
+    border: none;
+    background: transparent;
+}
+.scroll_progress::-webkit-progress-bar {
+    background: transparent;
+}
+.scroll_progress::-webkit-progress-value {
+    background: var(--c-turquoise);
+}
+/* ---------------------------------- */
 
 .my-header {
     position: sticky;
@@ -54,6 +135,26 @@
     -webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
             animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
+
+/* ---Editor--- */
+@keyframes glow-input {
+    0% {
+    border-color: #393;
+    box-shadow: 0 0 5px rgba(0,255,0,.2), inset 0 0 5px rgba(0,255,0,.1), 0 2px 0 #4474f7;
+    }	
+    100% {
+    border-color: #6f6;
+    box-shadow: 0 0 20px rgba(0,255,0,.6), inset 0 0 10px rgba(0,255,0,.4), 0 2px 0 #4474f7;
+    }
+}
+.form-control-lg:focus {
+    animation: glow-input 800ms ease-out infinite alternate;
+    border: 1px dashed #393;
+    box-shadow: 0 0 5px rgba(0,255,0,.2), inset 0 0 5px rgba(0,255,0,.1), 0 2px 0 #4474f7;
+    outline: none;
+}
+/* ------------ */
+
 .page {
     width: 100%;
     height: 100%;
@@ -70,7 +171,10 @@
 
 .banner__bg {
     border-radius: var(--l-sm2);
-    background: var(--bg-banner);
+    background: var(--bg-banner-desktop);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     /* box-shadow: var(--box-shadow); */
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -85,6 +189,7 @@
 }
 
 h1 {
+    font-family: "Chela One", system-ui;
     background-image: linear-gradient(to right, 
         hsl(0, 100%, 50%),    /* Red */
         hsl(15, 100%, 50%),   /* Reddish Orange */
@@ -105,6 +210,8 @@ h1 {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: var(--text-shadow);
+    font-size: clamp(var(--l-lg3), calc(var(--size) * 3), var(--l-lg6));
+    letter-spacing: 8px;
 }
 
 /* ---Search-Input--- */
@@ -125,6 +232,35 @@ h1 {
 .list-group-item {
     cursor: pointer;
 }
+@-webkit-keyframes fade-in-top {
+    0% {
+        -webkit-transform: translateY(-30px);
+                transform: translateY(-30px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes fade-in-top {
+    0% {
+        -webkit-transform: translateY(-30px);
+                transform: translateY(-30px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+        opacity: 1;
+    }
+}
+.dropdown-title {
+    opacity: 0;
+    -webkit-animation: fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation: fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
 
 /* ---Colors-Shelf-Section--- */
 .sidebar-nav {
@@ -134,10 +270,22 @@ h1 {
 
 .card {
     border: none;
+    -webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 .color-display-header {
     border-radius: var(--l-sm3);
     background: pink;
+}
+.color-display-header-text {
+    font-family: "Chela One", system-ui;
+    font-size: clamp(var(--l-md3), calc(var(--size) * 1.2), var(--l-lg2));
+    letter-spacing: 3px;
+    background-image: linear-gradient(-225deg, #FF057C 0%, #8D0B93 50%, #321575 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: var(--text-shadow);
 }
 .color-display {
     width: 100%;
@@ -176,6 +324,7 @@ h1 {
     color: var(--c-red-accent);
     font-weight: bold;
     opacity: 0;
+    z-index: 2;
 }
 
 @-webkit-keyframes fade-out-top {
@@ -232,9 +381,22 @@ h1 {
     translate: 0 35px;
     transition: var(--transition);
 }
+.share-btn {
+    background: rgba(0, 0, 0, .4);
+    border-radius: calc(var(--l-sm3) - .25rem);
+    padding: var(--l-sm1);
+    margin: 0 .25rem .35rem auto;
+    color: var(--c-alabastor);
+    translate: 0 35px;
+    transition: var(--transition);
+}
 .color-place:hover .copy-btn-1,
-.color-place:hover .copy-btn-2 {
+.color-place:hover .copy-btn-2,
+.color-place:hover .share-btn {
     translate: 0;
+}
+.share-btn:hover {
+    cursor: pointer;
 }
 
 .card_btn_group button {
@@ -264,8 +426,19 @@ hr {
         0 11px black;
 }
 /* -------------- */
+footer img {
+    width: 40px;
+    filter: var(--img-shadow);
+}
+footer p {
+    font-size: clamp(var(--l-sm2), calc(var(--size) * 1.2), var(--l-sm4));
+}
 
 @media all and (max-width: 800px) {
+    .banner__bg {
+        background: var(--bg-banner-mobile);
+        background-position: bottom center;
+    }
     .copy-btn-2 {
         font-size: clamp(var(--l-sm1), calc(var(--size) * 1.2), var(--l-sm4));
     }

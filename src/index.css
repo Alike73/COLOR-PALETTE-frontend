@@ -1,6 +1,8 @@
 @import "~normalize.css/normalize.css";
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
+/* font-family: "Poppins", sans-serif;
+font-family: "Chela One", system-ui; */
 
 html {
   box-sizing: border-box;
@@ -22,6 +24,7 @@ body {
 body {
   margin: 0;
   padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 :root {
@@ -31,9 +34,12 @@ body {
   --c-secondary: hsl(210, 16%, 93%);
   --c-alabastor: hsl(54, 24%, 92%);
   --c-light: hsl(0, 0%, 100%);
+  --c-label: hsl(210, 16%, 93%);
   --c-pink: hsl(304, 30%, 72%);
   --c-terracotta: hsl(350, 38%, 33%);
   --c-red-accent: hsl(0, 100%, 50%);
+  --c-transparent-dark: hsla(0, 0%, 0%, 0.667);
+  --c-turquoise: hsl(180, 100%, 50%);
 
   --img-shadow: drop-shadow(1px 2px 3px #000000);
   --img-shadow-2: drop-shadow(1px 1px 1px #707070);
@@ -59,12 +65,15 @@ body {
   --l-lg3: 4rem;
   --l-lg4: 4.7rem;
   --l-lg5: 7.5rem;
+  --l-lg6: 10.5rem;
 
   --transition: 250ms ease-in-out;
   --transition-sm: 125ms ease-in-out;
   --transition-lg: 500ms ease-in-out;
 
   --bg-display: url('./assets/images/card-palette-bg.png');
-  --bg-banner: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+  /* --bg-banner: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%); */
   --bg-header: linear-gradient(-225deg, #65379B 0%, #886AEA 53%, #6457C6 100%);
+  --bg-banner-desktop: url('./assets/images/desktop-banner-bg.jpg');
+  --bg-banner-mobile: url('./assets/images/palette-banner-bg-mobile.png');
 }

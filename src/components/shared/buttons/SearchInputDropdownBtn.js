@@ -20,7 +20,7 @@ const SearchInputDropdownBtn = ({ category, title }) => {
 
     return (
         <button 
-            className={ `btn btn-sm rounded-pill px-3 ${ selectedCategory === category ? "btn-secondary" : "btn-outline-secondary" }` } 
+            className={ `btn btn-sm rounded-pill px-3 ${ selectedCategory === category ? "btn-primary" : "btn-outline-primary" }` } 
             type="button"
             onClick = { handleFilteredCategory }
             >

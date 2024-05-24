@@ -8,7 +8,7 @@ const myURL = 'http://localhost:7000';
 // GET:
 const getAllPalettes = (setMyPalettes) => {
     axios.get(`${myURL}`)
-    .then(({data}) => { console.log(data)
+    .then(({data}) => { // console.log(data)
         setMyPalettes(data)
     })
 }
@@ -19,7 +19,7 @@ const addPalette = (
     ) => {
     axios.post(`${myURL}/savePalette`, { title, category, color_1, color_2, color_3, color_4 })
     .then((data) => {
-        console.log(data)
+        // console.log(data)
         setTitle("")
         setCategory("")
         setColor_1("")
@@ -34,9 +34,9 @@ const addPalette = (
 const editPalette = (
     paletteId, title, setTitle, category, setCategory, color_1, setColor_1, color_2, setColor_2, color_3, setColor_3, color_4, setColor_4, setMyPalettes, setEditing
     ) => {
-    axios.post(`${myURL}/editProject`, { _id: paletteId, title, category, color_1, color_2, color_3, color_4 })
+    axios.post(`${myURL}/editPalette`, { _id: paletteId, title, category, color_1, color_2, color_3, color_4 })
     .then((data) => {
-        console.log(data)
+        // console.log(data)
         setTitle("")
         setCategory("")
         setColor_1("")
@@ -51,7 +51,7 @@ const editPalette = (
 const deletePalette = (_id, setMyPalettes) => {
     axios.post(`${myURL}/deletePalette`, { _id })
     .then((data) => {
-        console.log(data)
+        // console.log(data)
         getAllPalettes(setMyPalettes)
     })
 };;

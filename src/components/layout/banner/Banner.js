@@ -5,7 +5,7 @@ const Banner = ({ bannerImg, setEditing, setTitle, setCategory, setColor_1, setC
 
     return (
         <div className="row flex-lg-row-reverse justify-content-center align-items-center g-3 pb-5 mb-5 banner__bg">
-            <div className="col-10 col-sm-8 col-lg-6">
+            <div className="col-10 col-sm-8 col-lg-5">
                 <img 
                     src={ bannerImg } 
                     className="d-block mx-lg-auto img-fluid banner__img" 
@@ -14,8 +14,8 @@ const Banner = ({ bannerImg, setEditing, setTitle, setCategory, setColor_1, setC
                     loading="lazy" 
                 />
             </div>
-            <div className="col-lg-6">
-                <h1 className="display-1 fw-bold lh-1 text-center mb-5 pb-5">
+            <div className="col-lg-7">
+                <h1 className="fw-bold lh-1 text-center mb-5 pb-5">
                     Color Palettes
                 </h1>
                 <div className="d-flex justify-content-center">

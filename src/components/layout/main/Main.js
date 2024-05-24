@@ -8,6 +8,9 @@ import Header from '../header/Header';
 import bannerImg from '../../../assets/images/pastelle-colors.svg';
 import Editor from '../../editor/Editor';
 import ColorsShelf from '../colors-shelf/ColorsShelf';
+import ScrollBtn from '../../scrollbtn/ScrollBtn';
+import MyScrollProgress from '../../scrollprogress/MyScrollProgress';
+import Footer from '../footer/Footer';
 
 const Main = () => {
 
@@ -80,6 +83,8 @@ const Main = () => {
 
     return (
         <div className='page'>
+            <MyScrollProgress />
+            <ScrollBtn />
             <Editor 
             handleSubmit = { handleSubmit } 
             editing = { editing }
@@ -114,6 +119,7 @@ const Main = () => {
                     setMyPalettes = { setMyPalettes } 
                 />
             </main>
+            <Footer />
         </div>
     )
 };
