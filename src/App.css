@@ -161,32 +161,6 @@
     min-height: 100vh;
 }
 
-.palette-icon {
-    width: 2.5rem;
-    filter: var(--img-shadow-2);
-}
-.palette-icon.active {
-    filter: var(--img-shadow);
-}
-
-.banner__bg {
-    border-radius: var(--l-sm2);
-    background: var(--bg-banner-desktop);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.banner__img {
-    filter: var(--img-shadow-2);
-    box-shadow: var(--box-shadow);
-    border-radius: var(--l-sm2);
-}
-.tin_paint {
-    filter: var(--img-shadow-2);
-}
-
 h1 {
     font-family: "Chela One", system-ui;
     background-image: linear-gradient(to right, 
@@ -211,6 +185,32 @@ h1 {
     text-shadow: var(--text-shadow);
     font-size: clamp(var(--l-lg3), calc(var(--size) * 3), var(--l-lg6));
     letter-spacing: 8px;
+}
+
+.palette-icon {
+    width: 2.5rem;
+    filter: var(--img-shadow-2);
+}
+.palette-icon.active {
+    filter: var(--img-shadow);
+}
+
+.banner__bg {
+    border-radius: var(--l-sm2);
+    background: var(--bg-banner-desktop);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.banner__img {
+    filter: var(--img-shadow-2);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--l-sm2);
+}
+.tin_paint {
+    filter: var(--img-shadow-2);
 }
 
 /* ---Search-Input--- */
