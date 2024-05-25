@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-const myURL = 'http://localhost:7000';
+const myURL = 'https://color-palette-backend.onrender.com';
 
 // http://localhost:7000
-// 
+// https://color-palette-backend.onrender.com
 
 // GET:
 const getAllPalettes = (setMyPalettes) => {
