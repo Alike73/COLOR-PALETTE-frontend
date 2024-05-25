@@ -72,7 +72,6 @@ body {
   --transition-lg: 500ms ease-in-out;
 
   --bg-display: url('./assets/images/card-palette-bg.png');
-  /* --bg-banner: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%); */
   --bg-header: linear-gradient(-225deg, #65379B 0%, #886AEA 53%, #6457C6 100%);
   --bg-banner-desktop: url('./assets/images/desktop-banner-bg.jpg');
   --bg-banner-mobile: url('./assets/images/palette-banner-bg-mobile.png');

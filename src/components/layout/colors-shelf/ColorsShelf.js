@@ -3,8 +3,6 @@ import Palettes from './Palettes';
 
 const ColorsShelf = ({ filteredPalettes, updatingInInput, setMyPalettes }) => {
 
-    // row g-3
-
     return (
         <>
             <Palettes 

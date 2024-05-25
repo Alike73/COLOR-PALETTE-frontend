@@ -43,7 +43,7 @@ const EditorForm = ({ handleSubmit, editing, title, setTitle,
                 <span className='text-danger fs-4 fw-bold mx-2'>
                     14
                 </span>
-                 characters
+                characters
             </p>
             <div className="input-group mb-3">
                 <input 

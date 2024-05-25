@@ -8,7 +8,6 @@ import InputInfoBtn from './InputInfoBtn';
 
 const SearchInput = ({ handleOpenEditor, filteredPalettes }) => {
 
-
     const [isDropdownVisible, setDropdownVisible] = useState(false);
     const isActiveHeader = useSelector(getActiveHeader);
     const searchTerm = useSelector(getSearchTerm);
@@ -18,7 +17,6 @@ const SearchInput = ({ handleOpenEditor, filteredPalettes }) => {
     const handleSearchTerm = (e) => {
         dispatch(setSearchTerm(e.target.value))
     }
-    
 
     const handleFocus = () => {
         setDropdownVisible(true);
