@@ -17,7 +17,7 @@ const Header = ({ filteredPalettes }) => {
     useEffect(() => {
         getMyPermission(setPermission)
         window.addEventListener("scroll", () => {
-            if (window.scrollY > 150) {
+            if (window.scrollY > 100) {
                 dispatch(setIsActiveHeader(true));
             } else {
                 dispatch(setIsActiveHeader(false));
