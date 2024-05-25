@@ -278,7 +278,7 @@ h1 {
 }
 .color-display-header-text {
     font-family: "Chela One", system-ui;
-    font-size: clamp(var(--l-md3), calc(var(--size) * 1.2), var(--l-lg2));
+    font-size: clamp(var(--l-lg1), calc(var(--size) * 1.2), var(--l-lg2));
     letter-spacing: 3px;
     background-image: linear-gradient(-225deg, #FF057C 0%, #8D0B93 50%, #321575 100%);
     background-clip: text;
